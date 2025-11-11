@@ -11,6 +11,7 @@ namespace Tower_Defence.Logic
     class Wave:Enemy
     {
         uint stage = 0;
+        int enemy_health;
         protected uint Waves
         {
             get
@@ -26,7 +27,7 @@ namespace Tower_Defence.Logic
         public Wave()
         {
             stage++;
-            this.health = +15;
+            health += 15;
         }
         public void ResetWave()
         {

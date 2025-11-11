@@ -9,18 +9,18 @@ using System.Threading.Tasks;
 namespace Tower.Logic
 {
     using Tower_Defence.Game;
-    class Upgrade:Tower
+    class Upgrade
     {
-       public  Upgrade():base()
-        {
-            damage = +5;
-            speed -= 0.8;
-        }
-        public void LevelUp()
-        {
-            damage += 2;
-            speed -= 0.3;
-            price += 10;
-        }
+       //public  Upgrade()
+       // {
+       //     damage = +5;
+       //     speed -= 0.8;
+       // }
+       // public void LevelUp()
+       // {
+       //     damage += 2;
+       //     speed -= 0.3;
+       //     price += 10;
+       // }
     }
 }
