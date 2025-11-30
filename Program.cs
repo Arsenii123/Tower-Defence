@@ -9,7 +9,8 @@
         {
             static void Main(string[] args)
             {
-              Enemy e = new Enemy();
+              
+              Enemy  e = new High_Speed();
               Tower simple = new Tower();
               Level l = new Level();
               Main  m = new Main();
@@ -18,7 +19,9 @@
               simple.Attack(e);
               m.Print();
               e.IsMoving(m);
-           
+              simple.Placement();
+             simple--;
+             e--;
 
 
 

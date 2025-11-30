@@ -9,12 +9,21 @@ using Tower_Defence.Game;
 
 namespace Tower_Defence.Menu
 {
+    /// <summary>
+    /// Клас меню
+    /// </summary>
+    ///<reamrks>
+    /// Містить в собі функції для меню та показ карти
+    ///</reamrks>
     class Main
     {
-        private int[,] map = new int[22, 51];
+         int[,] map = new int[22, 51];
         
         public void Print()
         {
+            ///<example>
+            ///Приклад на показ меню, а потім карти
+            ///</example>
             Console.CursorLeft = 50;
             Console.CursorTop = 3;
             Console.WriteLine("Tower Defence");
@@ -60,11 +69,13 @@ namespace Tower_Defence.Menu
                             {
                                 Console.ForegroundColor = ConsoleColor.DarkGreen;
                                 brush = block;
+                                map.SetValue(3, y, x);
                             }
                             else
                             {
                                 Console.ForegroundColor = ConsoleColor.DarkGray;
                                 brush = stone;
+                                map.SetValue(4, y, x);
 
                             }
                         }
@@ -102,7 +113,10 @@ namespace Tower_Defence.Menu
         }
         public bool  IsPath(int y,int x)
         {
-            if(y<22 && x <= 50)
+            ///<example>
+            ///Якщо це дорога то буде повертатися true
+            ///</example>
+            if (y<22 && x <= 50)
             {
                 if (map[y, x] == 1)
                 {
@@ -120,6 +134,7 @@ namespace Tower_Defence.Menu
 
 
         }
+
      }
               
             

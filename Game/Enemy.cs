@@ -10,92 +10,56 @@ namespace Tower_Defence.Game
     using Tower_Defence.Menu;
     using System.Timers;
 
-    class Enemy
-         {
-          protected int health= 0;
-          protected int speed = 0;
-          private static Timer timer;
-        public Enemy()
+/// <summary>
+/// Абастрактний клас ворога який буде успадковуватися
+/// </summary>
+///<reamrks>
+/// Містить в собі функції як пересування, "анімацїї" та здоров'я
+///</reamrks>
+    abstract class Enemy
+    {
+        public delegate void MyEnemy();
+        public static Enemy operator --(Enemy e)
         {
-            health+=15;
-            speed += 3000;
+            e = null;
+            return null;
+
+
         }
-        public void IsAttacked(int damage)
+        virtual public void IsAttacked(int damage)
         {
-            health = health - damage;
+            ///<example>
+            ///Приклад  атаки
+            ///<code>
+            ///Enemy e =new Enemy();
+            ///e.IsAttacked(20);
+            ///</code>
+            ///</example>
+        }
+        virtual public void Appear()
+        {
+            ///<example>
+            ///Приклад  анімації
+            ///<code>
+            ///Enemy e =new Enemy();
+            ///e.Appear();
+            ///</code>
+            ///*анімація
+            ///</example>
 
         }
-        public void IsMoving(Main m)
+        virtual public void IsMoving(Main m)
         {
-             m = new Main();
-            int X = 0;
-            int Y = 2;
-            int oldX = 0;
-            int oldY = 0;
-            for(int y =0; y < 22; y++)
-            {
-                for(int x=0; x < 51; x++)
-                {
-                    oldX = X;
-                    oldY = Y;
-                    if (m.IsPath(y, x + 1) == true)
-                    {
-                        X = x;
-                        Y = y;
-                        X++;
-                    }
-                    else if (m.IsPath(y + 1, x) == true )
-                    {
-                        X = x;
-                        Y = y;
-                        Y++;
-                    }
-                    else if (x > 1 && y > 1)
-                    {
-                        if ( m.IsPath(y, x - 1) == true)
-                        {
-                            X = x;
-                            Y = y;
-                            X--;
-                        }
-                        else if ( m.IsPath(y - 1, x) == true)
-                        {
-                            X = x;
-                            Y = y;
-                            Y--;
-                        }
-                    }
-
-                    // Создаем таймер на 3 секунды (3000 миллисекунд)
-                    timer = new Timer(3000);
-
-                    // Авто сброс false, чтобы событие выполнялось только один раз
-                    timer.AutoReset = true;
-                    timer.Enabled = true;
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.CursorLeft = X;
-                    Console.CursorTop = Y;
-                    timer.Start();
-                    Console.WriteLine(".");
-                    Console.ResetColor();
-                    timer.Start();
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.CursorLeft = X;
-                    Console.CursorTop = Y;
-                    Console.WriteLine("\u2588");
-                    Console.ResetColor();
-
-
-
-                }
-                Console.WriteLine();
-            }
-
-
-
+            ///<example>
+            ///Приклад пересування
+            ///<code>
+            ///Enemy e =new Enemy();
+            ///e.IsMoving(m)
+            ///</code>
+            ///</example>
+            /// <value>    m- це клас який створює  карту, ми його викликаємо щоб перенести інформацію про дорогу в клас </value>
         }
 
     }
 
-
-    }
+}

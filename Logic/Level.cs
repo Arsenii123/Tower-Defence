@@ -6,11 +6,20 @@ using System.Threading.Tasks;
 
 namespace Tower_Defence.Logic
 {
-    class Level:Wave
+    /// <summary>
+    /// Клас про рівень 
+    /// </summary>
+    ///<reamrks>
+    /// Містить в собі функцію про переход на новий рівень
+    ///</reamrks>
+    class Level :Wave
     {
         int number = 1;
         public void LevelUp()
         {
+            ///<summary>
+            ///Новий рівень
+            ///</summary>
             number++;
             ResetWave();
         }

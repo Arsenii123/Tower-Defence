@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Tower Defence</name>
+    </assembly>
+    <members>
+        <member name="T:Tower_Defence.Game.Enemy">
+             <summary>
+             Абастрактний клас ворога який буде успадковуватися
+             </summary>
+            <reamrks>
+             Містить в собі функції як пересування, "анімацїї" та здоров'я
+            </reamrks>
+        </member>
+        <member name="T:Tower_Defence.Game.High_health">
+            <summary>
+            Це нащадок ворога 
+            </summary>
+        </member>
+        <member name="T:Tower_Defence.Game.High_Speed">
+            <summary>
+            Це нащадок ворога 
+            </summary>
+        </member>
+        <member name="T:Tower_Defence.Game.Tower">
+             <summary>
+             Абастрактний клас башні  який буде успадковуватися
+             </summary>
+            <reamrks>
+             Містить в собі функції як атака та явний і неявний конструктор
+            </reamrks>
+        </member>
+        <member name="T:Tower_Defence.Logic.Level">
+             <summary>
+             Клас про рівень 
+             </summary>
+            <reamrks>
+             Містить в собі функцію про переход на новий рівень
+            </reamrks>
+        </member>
+        <member name="T:Tower_Defence.Logic.Wave">
+             <summary>
+             Клас хвилі
+             </summary>
+            <reamrks>
+             Містить в собі функцію як перевантаження левелу
+            </reamrks>
+        </member>
+        <member name="T:Tower_Defence.Menu.Main">
+             <summary>
+             Клас меню
+             </summary>
+            <reamrks>
+             Містить в собі функції для меню та показ карти
+            </reamrks>
+        </member>
+    </members>
+</doc>

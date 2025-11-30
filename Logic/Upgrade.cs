@@ -8,19 +8,28 @@ using System.Threading.Tasks;
 
 namespace Tower.Logic
 {
+    /// <summary>
+    /// Клас апгрейду
+    /// </summary>
+    ///<reamrks>
+    /// Містить в собі функцію про збільшення 
+    ///</reamrks>
     using Tower_Defence.Game;
-    class Upgrade
+    class Upgrade:Tower
     {
-       //public  Upgrade()
-       // {
-       //     damage = +5;
-       //     speed -= 0.8;
-       // }
-       // public void LevelUp()
-       // {
-       //     damage += 2;
-       //     speed -= 0.3;
-       //     price += 10;
-       // }
+        public Upgrade()
+        {
+            damage = +5;
+            speed -= 0.8;
+        }
+        public void LevelUp()
+        {
+            /// <summary>
+            /// Функція про підвищення характеристик
+            /// </summary>
+            damage += 2;
+            speed -= 0.3;
+            price += 10;
+        }
     }
 }

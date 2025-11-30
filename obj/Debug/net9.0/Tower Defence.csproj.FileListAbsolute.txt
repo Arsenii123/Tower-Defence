@@ -27,3 +27,5 @@ C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.dl
 C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.pdb
 C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\Tower Defence.genruntimeconfig.cache
 C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\ref\Tower Defence.dll
+C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.xml
+C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\Tower Defence.xml

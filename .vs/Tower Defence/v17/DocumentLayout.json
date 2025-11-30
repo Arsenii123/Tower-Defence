@@ -3,32 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|c:\\users\\pc\\onedrive\\desktop\\.net\\towerdefence\\game\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|solutionrelative:game\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|c:\\users\\pc\\onedrive\\desktop\\.net\\towerdefence\\game\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|solutionrelative:game\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|c:\\users\\pc\\onedrive\\desktop\\.net\\towerdefence\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|c:\\users\\pc\\onedrive\\desktop\\.net\\towerdefence\\logic\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|solutionrelative:logic\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|c:\\users\\pc\\onedrive\\desktop\\.net\\towerdefence\\menu\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|solutionrelative:menu\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|c:\\users\\pc\\onedrive\\desktop\\.net\\towerdefence\\game\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|solutionrelative:game\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|c:\\users\\pc\\onedrive\\desktop\\.net\\towerdefence\\logic\\wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|solutionrelative:logic\\wave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|c:\\users\\pc\\onedrive\\desktop\\.net\\towerdefence\\game\\high_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|solutionrelative:game\\high_health.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|c:\\users\\pc\\onedrive\\desktop\\.net\\towerdefence\\game\\high_speed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|solutionrelative:game\\high_speed.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|c:\\users\\pc\\onedrive\\desktop\\.net\\towerdefence\\logic\\upgrade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|solutionrelative:logic\\upgrade.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|c:\\users\\pc\\onedrive\\desktop\\.net\\towerdefence\\game\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|solutionrelative:game\\tower.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|c:\\users\\pc\\onedrive\\desktop\\.net\\towerdefence\\tower defence.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|solutionrelative:tower defence.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|c:\\users\\pc\\onedrive\\desktop\\.net\\towerdefence\\logic\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{185BAE46-A961-41E7-9F25-986B64755547}|Tower Defence.csproj|solutionrelative:logic\\level.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,13 +58,50 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
+              "Title": "Tower Defence",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Tower Defence.csproj",
+              "RelativeDocumentMoniker": "Tower Defence.csproj",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Tower Defence.csproj",
+              "RelativeToolTip": "Tower Defence.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-27T14:24:02.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "High_health.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Game\\High_health.cs",
+              "RelativeDocumentMoniker": "Game\\High_health.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Game\\High_health.cs",
+              "RelativeToolTip": "Game\\High_health.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T19:25:56.345Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "High_Speed.cs",
+              "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Game\\High_Speed.cs",
+              "RelativeDocumentMoniker": "Game\\High_Speed.cs",
+              "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Game\\High_Speed.cs",
+              "RelativeToolTip": "Game\\High_Speed.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-23T17:01:49.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Level.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Logic\\Level.cs",
               "RelativeDocumentMoniker": "Logic\\Level.cs",
               "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Logic\\Level.cs",
               "RelativeToolTip": "Logic\\Level.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-03T18:51:16.559Z"
             },
@@ -64,58 +113,62 @@
               "RelativeDocumentMoniker": "Logic\\Wave.cs",
               "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Logic\\Wave.cs",
               "RelativeToolTip": "Logic\\Wave.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-03T18:27:04.889Z"
+              "WhenOpened": "2025-11-03T18:27:04.889Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Enemy.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Game\\Enemy.cs",
               "RelativeDocumentMoniker": "Game\\Enemy.cs",
               "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Game\\Enemy.cs",
               "RelativeToolTip": "Game\\Enemy.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAgwFAAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwAkAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-03T18:23:47.183Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Upgrade.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Logic\\Upgrade.cs",
               "RelativeDocumentMoniker": "Logic\\Upgrade.cs",
               "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Logic\\Upgrade.cs",
               "RelativeToolTip": "Logic\\Upgrade.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T18:47:59.03Z"
+              "WhenOpened": "2025-11-02T18:47:59.03Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "Tower.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Game\\Tower.cs",
               "RelativeDocumentMoniker": "Game\\Tower.cs",
               "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Game\\Tower.cs",
               "RelativeToolTip": "Game\\Tower.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAgwEkAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T18:45:38.191Z"
+              "WhenOpened": "2025-11-02T18:45:38.191Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Menu.cs",
               "DocumentMoniker": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Menu\\Menu.cs",
               "RelativeDocumentMoniker": "Menu\\Menu.cs",
               "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Menu\\Menu.cs",
               "RelativeToolTip": "Menu\\Menu.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAtwBQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwB8AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-02T18:43:42.845Z"
+              "WhenOpened": "2025-11-02T18:43:42.845Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -125,7 +178,7 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-02T18:42:16.482Z",
               "EditorCaption": ""
