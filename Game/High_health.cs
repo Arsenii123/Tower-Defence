@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tower_Defence.Menu;
+using Tower_Defence.Engine;
 
 namespace Tower_Defence.Game
 {
@@ -92,17 +93,8 @@ namespace Tower_Defence.Game
                             Y--;
                         }
                     }
-                    Console.CursorLeft = X;
-                    Console.CursorTop = Y;
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.ResetColor();
-                    Thread t = new Thread(Appear);
-                    t.Start();
-                    Console.CursorLeft = oldX;
-                    Console.CursorTop = oldY;
-                    Console.ForegroundColor = ConsoleColor.Yellow;
-                    Console.WriteLine("\u2588");
-                    Console.ResetColor();
+                    GameEngine ge = new GameEngine();
+                    ge.Run(X,Y);
 
                 }
                 Console.WriteLine();

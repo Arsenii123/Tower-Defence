@@ -1,6 +1,6 @@
 ﻿namespace Tower_Defence
 {
-
+    using Tower_Defence.Engine;
     using Tower_Defence.Game;
     using Tower_Defence.Logic;
     using Tower_Defence.Menu;
@@ -15,13 +15,9 @@
               Level l = new Level();
               Main  m = new Main();
               Wave w = new Wave();
-              l.LevelUp();
-              simple.Attack(e);
-              m.Print();
-              e.IsMoving(m);
-              simple.Placement();
-             simple--;
-             e--;
+              GameEngine game = new GameEngine();
+            m.Print();
+             e.IsMoving(m);
 
 
 
