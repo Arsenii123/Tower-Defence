@@ -1,24 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Tower.Logic;
-using Tower_Defence.Engine;
 using Tower_Defence.Menu;
-namespace Tower_Defence.Game // объявляем пространство имён для игровых объектов
+
+namespace Tower_Defence.Game
 {
-    class High_Speed : Enemy // создаём класс быстрых врагов, наследуемый от базового Enemy
+    class Boss:Enemy
     {
-        public int health = 100; // начальное здоровье врага
-        public int speed = 300; // задержка в миллисекундах между шагами (чем меньше — тем быстрее)
+        public int health = 800; // начальное здоровье врага
+        public int speed = 500; // задержка в миллисекундах между шагами (чем меньше — тем быстрее)
         public int x, y; // текущие координаты врага на карте
         public int oldX, oldY; // предыдущие координаты (для стирания старого положения)
-        private static int towers = 0;
         // направление движения: 0=вправо, 1=вниз, 2=влево, 3=вверх
         private int direction = 0; // начальное направление — вправо
-        public High_Speed() // конструктор класса
+        private static int towers = 0;
+
+        public Boss() // конструктор класса
         {
             x = 0; // стартовая позиция по горизонтали
             y = 2; // стартовая позиция по вертикали (обычно начало пути)
@@ -40,11 +40,12 @@ namespace Tower_Defence.Game // объявляем пространство им
         {
             Console.SetCursorPosition(x, y); // перемещаем курсор в текущие координаты
             Console.ForegroundColor = ConsoleColor.Red; // цвет врага — красный
-            Console.Write("."); // рисуем точку как изображение врага
+            Console.Write("#"); // рисуем точку как изображение врага
             Console.ResetColor(); // сбрасываем цвет
         }
         public override void IsMoving(Main map, List<Tower>  t) // основной метод движения врага по карте
         {
+
             Console.CursorVisible = false; // скрываем мигающий курсор
             // рисуем врага в начальной позиции
             Draw(); // первый кадр отрисовки
@@ -53,6 +54,7 @@ namespace Tower_Defence.Game // объявляем пространство им
                 oldX = x; // запоминаем текущие координаты как старые
                 oldY = y; // запоминаем текущие координаты как старые
                 bool moved = false; // флаг, удалось ли сдвинуться
+                                    // сначала пытаемся идти в текущем направлении
                 if (Console.KeyAvailable && t != null)
                 {
                     Pause(t);
@@ -62,13 +64,13 @@ namespace Tower_Defence.Game // объявляем пространство им
                     for (int i = 0; i < towers; i++)
                     {
                         IsAttacked(t[i].Damage);
-                        if (t[i] is Fire_wizzard)
-                        {
-                            t[i].Effect(health);
-                        }
 
                     }
                 }
+
+
+
+
                 if (health == 0)
                 {
                     Console.SetCursorPosition(x, y); // перемещаем курсор в текущие координаты
@@ -77,7 +79,9 @@ namespace Tower_Defence.Game // объявляем пространство им
                     Console.ResetColor(); // сбрасываем цвет
                     break;
                 }
-                // сначала пытаемся идти в текущем направлении
+
+
+
                 if (direction == 0 && x < 50 && map.IsPath(y, x + 1)) // вправо
                 {
                     x++; // двигаемся вправо
@@ -104,7 +108,7 @@ namespace Tower_Defence.Game // объявляем пространство им
 
                     // если вперёд нельзя — ищем поворот по приоритету
                     // приоритет: право → вниз → лево → вверх
-                    if (direction == 1 || direction==3)
+                    if (direction == 1 || direction == 3)
                     {
                         if (x < 50 && map.IsPath(y, x + 1)) // пробуем повернуть направо
                         {
@@ -140,10 +144,6 @@ namespace Tower_Defence.Game // объявляем пространство им
 
 
 
-
- 
-
-
                 }
 
 
@@ -161,10 +161,6 @@ namespace Tower_Defence.Game // объявляем пространство им
                     if (x < oldX) direction = 2; // двигались влево
                     if (y < oldY) direction = 3; // двигались вверх
                 }
-                if (End() == true)
-                {
-                    break;
-                }
                 Thread.Sleep(speed); // задержка для контроля скорости
             }
             // если враг дошёл до конца живым — убираем его с экрана
@@ -173,6 +169,7 @@ namespace Tower_Defence.Game // объявляем пространство им
                 ClearPrevious(); // стираем последнего положения
             }
             Console.CursorVisible = true; // возвращаем видимость курсора
+
         }
         public override void Pause(List<Tower> t)
         {
@@ -190,11 +187,14 @@ namespace Tower_Defence.Game // объявляем пространство им
                     towers++;
                     break;
                 case ConsoleKey.D3:
-
+                    t.Add(new Ice_wizzard());
+                    t[towers].Placement();
+                    towers++;
                     break;
 
             }
-        }
 
+
+        }
     }
 }

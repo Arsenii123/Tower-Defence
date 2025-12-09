@@ -9,15 +9,24 @@ namespace Tower_Defence.Game
 {
     using Tower_Defence.Menu;
     using System.Timers;
+    using Tower_Defence.Logic;
+    using global::Tower.Logic;
 
-/// <summary>
-/// Абастрактний клас ворога який буде успадковуватися
-/// </summary>
-///<reamrks>
-/// Містить в собі функції як пересування, "анімацїї" та здоров'я
-///</reamrks>
+    /// <summary>
+    /// Абастрактний клас ворога який буде успадковуватися
+    /// </summary>
+    ///<reamrks>
+    /// Містить в собі функції як пересування, "анімацїї" та здоров'я
+    ///</reamrks>
     abstract class Enemy
     {
+        public delegate void MyEventHandler(Main e,List<Tower> t);
+        public  MyEventHandler? MakeMove;
+        public void StartEvent(Main e, List<Tower> t)
+        {
+            if (MakeMove != null)
+                MakeMove(e,t);
+        }
         public delegate void MyEnemy();
         public static Enemy operator --(Enemy e)
         {
@@ -48,7 +57,7 @@ namespace Tower_Defence.Game
             ///</example>
 
         }
-        virtual public void IsMoving(Main m)
+        virtual public void IsMoving(Main m, List<Tower> t)
         {
             ///<example>
             ///Приклад пересування
@@ -58,6 +67,15 @@ namespace Tower_Defence.Game
             ///</code>
             ///</example>
             /// <value>    m- це клас який створює  карту, ми його викликаємо щоб перенести інформацію про дорогу в клас </value>
+            
+        }
+        virtual public void Pause(List<Tower> t)
+        {
+           
+        }
+        virtual public bool End()
+        {
+            return false;
         }
 
     }

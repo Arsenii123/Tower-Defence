@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Tower_Defence.Logic
 {
+    using System.Xml.Linq;
     using Tower_Defence.Game;
     /// <summary>
     /// Клас хвилі
@@ -14,11 +15,12 @@ namespace Tower_Defence.Logic
     ///<reamrks>
     /// Містить в собі функцію як перевантаження левелу
     ///</reamrks>
-    class Wave :High_Speed
+    class Wave
     {
-        uint stage = 0;
-        int enemy_health;
-        protected uint Waves
+      static protected uint stage = 0;
+        public string info = $"Waves: {stage}";
+
+        public uint Waves
         {
             get
             {
@@ -36,15 +38,41 @@ namespace Tower_Defence.Logic
             /// Конструктор для налаштування хвилі
             /// </summary>
             stage++;
-            health += 15;
+            Console.SetCursorPosition(54, 0); // перемещаем курсор в текущие координаты
+
+            Console.WriteLine(info);
+
+
+
         }
-        public void ResetWave()
+        public void NextWave(int e)
+        {
+            for(int i = 0; i < e; i++)
+            {
+                if (i ==5*stage)
+                {
+                    stage++;
+                }
+            }
+
+
+           Console.SetCursorPosition(54, 0); // перемещаем курсор в текущие координаты
+
+
+            info = $"Waves: {stage}";
+                Console.WriteLine(info);
+            }
+        
+        public void ResetWave(List<Enemy> e)
         {
             /// <summary>
             /// Функція перевантаження
             /// </summary>
-            health = 0;
-            speed = 0;
+            for (int i = 0; i < e.Count; i++) {
+                e[i]--;
+            }
+
+            
             stage = 0;
         }
 

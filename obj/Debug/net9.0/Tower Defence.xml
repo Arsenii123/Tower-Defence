@@ -16,11 +16,7 @@
             <summary>
             Це нащадок ворога 
             </summary>
-        </member>
-        <member name="T:Tower_Defence.Game.High_Speed">
-            <summary>
-            Це нащадок ворога 
-            </summary>
+                    public int health = 100; // начальное здоровье врага
         </member>
         <member name="T:Tower_Defence.Game.Tower">
              <summary>
@@ -28,14 +24,6 @@
              </summary>
             <reamrks>
              Містить в собі функції як атака та явний і неявний конструктор
-            </reamrks>
-        </member>
-        <member name="T:Tower_Defence.Logic.Level">
-             <summary>
-             Клас про рівень 
-             </summary>
-            <reamrks>
-             Містить в собі функцію про переход на новий рівень
             </reamrks>
         </member>
         <member name="T:Tower_Defence.Logic.Wave">

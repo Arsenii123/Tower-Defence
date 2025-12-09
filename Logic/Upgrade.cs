@@ -15,21 +15,42 @@ namespace Tower.Logic
     /// Містить в собі функцію про збільшення 
     ///</reamrks>
     using Tower_Defence.Game;
-    class Upgrade:Tower
+    class Upgrade
     {
-        public Upgrade()
+        List<int> upgrades=new List<int>();
+        public  Upgrade()
         {
-            damage = +5;
-            speed -= 0.8;
+
         }
-        public void LevelUp()
+        public void LevelUp(List<Tower> t)
         {
             /// <summary>
             /// Функція про підвищення характеристик
             /// </summary>
-            damage += 2;
-            speed -= 0.3;
-            price += 10;
+
+
+            while (true)
+            {
+                Console.SetCursorPosition(54, 2);
+                Console.WriteLine("Number of tower(if nothing print -1):");
+                int number = Convert.ToInt32(Console.ReadLine());
+                ConsoleKeyInfo k = Console.ReadKey(true);
+                if (upgrades[number] != 10 || number!=-1)
+                {
+                    t[number].Up();
+                    upgrades[number]++;
+                }
+                else
+                {
+                    Console.WriteLine("Can`t upgrade(if you dont press -1 this tower has max level)");
+                }
+                if (k.Key == ConsoleKey.Q)
+                {
+                    break;
+                }
+            }
+ 
+
         }
     }
 }
