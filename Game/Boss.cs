@@ -10,13 +10,7 @@ namespace Tower_Defence.Game
 {
     class Boss:Enemy
     {
-        public int health = 800; // начальное здоровье врага
-        public int speed = 500; // задержка в миллисекундах между шагами (чем меньше — тем быстрее)
-        public int x, y; // текущие координаты врага на карте
-        public int oldX, oldY; // предыдущие координаты (для стирания старого положения)
-        // направление движения: 0=вправо, 1=вниз, 2=влево, 3=вверх
         private int direction = 0; // начальное направление — вправо
-        private static int towers = 0;
 
         public Boss() // конструктор класса
         {
@@ -24,19 +18,21 @@ namespace Tower_Defence.Game
             y = 2; // стартовая позиция по вертикали (обычно начало пути)
             oldX = x; // сохраняем начальные координаты как старые
             oldY = y; // сохраняем начальные координаты как старые
+            health = 800;
+            speed = 500;
         }
         public override void IsAttacked(int damage) // переопределяем метод получения урона
         {
             health -= damage; // уменьшаем здоровье на полученный урон
         }
-        private void ClearPrevious() // стираем предыдущее положение врага
+        public override void ClearPrevious() // стираем предыдущее положение врага
         {
             Console.SetCursorPosition(oldX, oldY); // ставим курсор на старые координаты
             Console.ForegroundColor = ConsoleColor.Yellow; // цвет дорожки (желтый)
             Console.Write("█"); // рисуем блок дорожки на месте, где был враг
             Console.ResetColor(); // сбрасываем цвет
         }
-        private void Draw() // отрисовываем врага в новой позиции
+        public override void Draw() // отрисовываем врага в новой позиции
         {
             Console.SetCursorPosition(x, y); // перемещаем курсор в текущие координаты
             Console.ForegroundColor = ConsoleColor.Red; // цвет врага — красный
@@ -49,24 +45,12 @@ namespace Tower_Defence.Game
             Console.CursorVisible = false; // скрываем мигающий курсор
             // рисуем врага в начальной позиции
             Draw(); // первый кадр отрисовки
-            while (health > 0 && y < 22) // цикл пока жив и не дошёл до конца карты
+            while (health > 0 && !End()) // цикл пока жив и не дошёл до конца карты
             {
                 oldX = x; // запоминаем текущие координаты как старые
                 oldY = y; // запоминаем текущие координаты как старые
                 bool moved = false; // флаг, удалось ли сдвинуться
                                     // сначала пытаемся идти в текущем направлении
-                if (Console.KeyAvailable && t != null)
-                {
-                    Pause(t);
-                }
-                if (t != null)
-                {
-                    for (int i = 0; i < towers; i++)
-                    {
-                        IsAttacked(t[i].Damage);
-
-                    }
-                }
 
 
 
@@ -171,30 +155,11 @@ namespace Tower_Defence.Game
             Console.CursorVisible = true; // возвращаем видимость курсора
 
         }
-        public override void Pause(List<Tower> t)
+        public override void Up()
         {
-            ConsoleKeyInfo k = Console.ReadKey(true);
-            switch (k.Key)
-            {
-                case ConsoleKey.D1:
-                    t.Add(new Archer());
-                    t[towers].Placement();
-                    towers++;
-                    break;
-                case ConsoleKey.D2:
-                    t.Add(new Fire_wizzard());
-                    t[towers].Placement();
-                    towers++;
-                    break;
-                case ConsoleKey.D3:
-                    t.Add(new Ice_wizzard());
-                    t[towers].Placement();
-                    towers++;
-                    break;
-
-            }
-
-
+            health += 25;
+            speed += 50;
         }
     }
+
 }

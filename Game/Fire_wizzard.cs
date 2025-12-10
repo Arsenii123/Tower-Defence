@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Tower_Defence.Game
 {
-    class Fire_wizzard:Tower
+    class Fire_wizzard : Tower
     {
         protected int damage;
         protected double price;
@@ -78,18 +78,37 @@ namespace Tower_Defence.Game
                 Console.ResetColor();
                 if (k.Key == ConsoleKey.B)
                 {
-                    Console.CursorLeft = X;
-                    Console.CursorTop = Y;
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine($"{vertical}{fullBlock}{fullBlock}{vertical}");
+                    Draw();
                     break;
                 }
 
             }
         }
-        public override void Effect(int health)
+        public override void Effect(List<Enemy> e)
         {
-            health -= fire_damage;
+            foreach (var i in e)
+            {
+                i.IsAttacked(fire_damage);
+            }
+        }
+        public override void Attack(List<Enemy> e)
+        {
+            foreach (var i in e)
+            {
+                i.IsAttacked(damage);
+            }
+            Effect(e);
+        }
+        public override void Draw()
+        {
+            char fullBlock = '█';   // Полный блок
+            char vertical = '│';    // Вертикальная линия
+            Console.CursorLeft = X;
+            Console.CursorTop = Y;
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"{vertical}{fullBlock}{fullBlock}{vertical}");
+            {
+            }
         }
     }
 }

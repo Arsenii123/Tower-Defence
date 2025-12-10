@@ -6,91 +6,82 @@ using System.Threading.Tasks;
 
 namespace Tower_Defence.Game
 {
-    class Archer:Tower
+    internal class Archer : Tower
     {
-        private  int damage;
-        public  double price;
-        static int X = 0;
-        static int Y = 0;
-        public override int Damage
+        public int X { get; set; }
+        public int Y { get; set; }
+        private int damage = 15;
+
+        public override int Damage => damage;
+
+        public override void Placement()
         {
-            get
-            {
-                return damage;
-            }
-            set
-            {
-                Damage = value;
-            }
-        }
-        public Archer()
-        {
-            ///<example>
-            ///Приклад конструктора
-            ///<code>
-            ///Tower e =new Tower();
-            ///</code>
-            ///налаштування параметрів
-            ///</example>
-            damage = 15;
-            price = 5;
-        }
-         public override void Placement()
-        {
-            char fullBlock = '█';   // Полный блок
-            char vertical = '│';    // Вертикальная линия
-            int oldX = 0;
-            int oldY = 0;
+            int posX = 20;  // стартовая позиция прицела
+            int posY = 10;
+            int oldX = posX;
+            int oldY = posY;
+
+            Console.CursorVisible = false;
+
             while (true)
             {
-                ConsoleKeyInfo k = Console.ReadKey(true);
-                oldX = X;
-                oldY = Y;
+                // Стираем старый прицел
+                Console.SetCursorPosition(oldX, oldY);
+                Console.Write(" ");
 
-                switch (k.Key)
-                {
-                    case ConsoleKey.RightArrow:
-                        X+=5;
-                        break;
-                    case ConsoleKey.LeftArrow:
-                        X-=5;
-                        break;
-                    case ConsoleKey.UpArrow:
-                        Y-=5;
-                        break;
-                    case ConsoleKey.DownArrow:
-                        Y+=5;
-                        break;
+                // Ждём нажатия клавиши
+                var key = Console.ReadKey(true).Key;
 
-                }
-                Console.CursorLeft = X;
-                Console.CursorTop = Y;
-                Console.ForegroundColor = ConsoleColor.Gray;
-                Console.WriteLine(".");
-                Console.ResetColor();
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.CursorLeft = oldX;
-                Console.CursorTop = oldY;
-                Console.WriteLine("\u2588");
-                Console.ResetColor();
-                if (k.Key == ConsoleKey.B)
+                // Запоминаем старое положение перед движением
+                oldX = posX;
+                oldY = posY;
+
+                // Двигаем прицел стрелками
+                switch (key)
                 {
-                    Console.CursorLeft = X;
-                    Console.CursorTop = Y;
-                    Console.ForegroundColor = ConsoleColor.DarkGreen;
-                    Console.WriteLine($"{vertical}{fullBlock}{fullBlock}{vertical}");
-                    break;
+                    case ConsoleKey.LeftArrow: posX -= 5; break;
+                    case ConsoleKey.RightArrow: posX += 5; break;
+                    case ConsoleKey.UpArrow: posY -= 1; break;
+                    case ConsoleKey.DownArrow: posY += 1; break;
+
+                    // ВОТ ТУТ — СТАВИМ БАШНЮ!
+                    case ConsoleKey.B:
+                    case ConsoleKey.Enter:
+                    case ConsoleKey.Spacebar:
+                        this.X = posX;
+                        this.Y = posY;
+                        Draw();                     // рисуем башню сразу
+                        Console.CursorVisible = true;
+                        return;                     // выходим — башня поставлена!
                 }
 
+                // Рисуем новый прицел
+                Console.SetCursorPosition(posX, posY);
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("✛");  // красивый прицел
+                Console.ResetColor();
             }
         }
-         public override void Up()
+
+        public override void Draw()
         {
-            damage += 10;
-            price += 5;
+            Console.SetCursorPosition(X, Y);
+            Console.ForegroundColor = ConsoleColor.DarkGreen;
+            Console.Write("│██│");
+            Console.ResetColor();
         }
 
+        public override void Attack(List<Enemy> enemies)
+        {
+            var target = enemies.FirstOrDefault(e => e.health > 0 && !e.End());
+            if (target != null)
+                target.IsAttacked(damage);
+        }
 
+        public override void Up()
+        {
+            damage += 10;
+        }
     }
 }
 

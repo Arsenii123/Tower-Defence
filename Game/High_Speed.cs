@@ -11,10 +11,6 @@ namespace Tower_Defence.Game // объявляем пространство им
 {
     class High_Speed : Enemy // создаём класс быстрых врагов, наследуемый от базового Enemy
     {
-        public int health = 100; // начальное здоровье врага
-        public int speed = 300; // задержка в миллисекундах между шагами (чем меньше — тем быстрее)
-        public int x, y; // текущие координаты врага на карте
-        public int oldX, oldY; // предыдущие координаты (для стирания старого положения)
         private static int towers = 0;
         // направление движения: 0=вправо, 1=вниз, 2=влево, 3=вверх
         private int direction = 0; // начальное направление — вправо
@@ -24,10 +20,16 @@ namespace Tower_Defence.Game // объявляем пространство им
             y = 2; // стартовая позиция по вертикали (обычно начало пути)
             oldX = x; // сохраняем начальные координаты как старые
             oldY = y; // сохраняем начальные координаты как старые
+            health = 100;
+            speed = 300;
         }
         public override void IsAttacked(int damage) // переопределяем метод получения урона
         {
             health -= damage; // уменьшаем здоровье на полученный урон
+        }
+        public override void IsSlowed(int speed)
+        {
+            this.speed -= speed;
         }
         private void ClearPrevious() // стираем предыдущее положение врага
         {
@@ -48,27 +50,11 @@ namespace Tower_Defence.Game // объявляем пространство им
             Console.CursorVisible = false; // скрываем мигающий курсор
             // рисуем врага в начальной позиции
             Draw(); // первый кадр отрисовки
-            while (health > 0 && y < 22) // цикл пока жив и не дошёл до конца карты
+            while (health > 0 && !End()) // цикл пока жив и не дошёл до конца карты
             {
                 oldX = x; // запоминаем текущие координаты как старые
                 oldY = y; // запоминаем текущие координаты как старые
                 bool moved = false; // флаг, удалось ли сдвинуться
-                if (Console.KeyAvailable && t != null)
-                {
-                    Pause(t);
-                }
-                if (t != null)
-                {
-                    for (int i = 0; i < towers; i++)
-                    {
-                        IsAttacked(t[i].Damage);
-                        if (t[i] is Fire_wizzard)
-                        {
-                            t[i].Effect(health);
-                        }
-
-                    }
-                }
                 if (health == 0)
                 {
                     Console.SetCursorPosition(x, y); // перемещаем курсор в текущие координаты
@@ -161,10 +147,6 @@ namespace Tower_Defence.Game // объявляем пространство им
                     if (x < oldX) direction = 2; // двигались влево
                     if (y < oldY) direction = 3; // двигались вверх
                 }
-                if (End() == true)
-                {
-                    break;
-                }
                 Thread.Sleep(speed); // задержка для контроля скорости
             }
             // если враг дошёл до конца живым — убираем его с экрана
@@ -174,26 +156,10 @@ namespace Tower_Defence.Game // объявляем пространство им
             }
             Console.CursorVisible = true; // возвращаем видимость курсора
         }
-        public override void Pause(List<Tower> t)
+        public override void Up()
         {
-            ConsoleKeyInfo k = Console.ReadKey(true);
-            switch (k.Key)
-            {
-                case ConsoleKey.D1:
-                    t.Add(new Archer());
-                    t[towers].Placement();
-                    towers++;
-                    break;
-                case ConsoleKey.D2:
-                    t.Add(new Fire_wizzard());
-                    t[towers].Placement();
-                    towers++;
-                    break;
-                case ConsoleKey.D3:
-
-                    break;
-
-            }
+            health += 25;
+            speed += 50;
         }
 
     }

@@ -47,13 +47,11 @@ namespace Tower_Defence.Logic
         }
         public void NextWave(int e)
         {
-            for(int i = 0; i < e; i++)
-            {
-                if (i ==5*stage)
+
+                if (e ==5*stage)
                 {
                     stage++;
                 }
-            }
 
 
            Console.SetCursorPosition(54, 0); // перемещаем курсор в текущие координаты
@@ -62,6 +60,17 @@ namespace Tower_Defence.Logic
             info = $"Waves: {stage}";
                 Console.WriteLine(info);
             }
+        public bool  Is_Next_Wave(int e)
+        {
+            if (e == 5 * stage)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         
         public void ResetWave(List<Enemy> e)
         {

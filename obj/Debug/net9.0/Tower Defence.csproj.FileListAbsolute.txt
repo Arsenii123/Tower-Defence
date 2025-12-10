@@ -12,6 +12,12 @@ C:\Users\PC\OneDrive\Desktop\.Net\Tower Defence\obj\Debug\net9.0\refint\Tower De
 C:\Users\PC\OneDrive\Desktop\.Net\Tower Defence\obj\Debug\net9.0\Tower Defence.pdb
 C:\Users\PC\OneDrive\Desktop\.Net\Tower Defence\obj\Debug\net9.0\Tower Defence.genruntimeconfig.cache
 C:\Users\PC\OneDrive\Desktop\.Net\Tower Defence\obj\Debug\net9.0\ref\Tower Defence.dll
+C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.exe
+C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.deps.json
+C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.runtimeconfig.json
+C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.dll
+C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.pdb
+C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.xml
 C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\Tower Defence.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\Tower Defence.AssemblyInfoInputs.cache
 C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\Tower Defence.AssemblyInfo.cs
@@ -19,13 +25,7 @@ C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\Tower Defence.cs
 C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\Tower Defence.sourcelink.json
 C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\Tower Defence.dll
 C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\refint\Tower Defence.dll
+C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\Tower Defence.xml
 C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\Tower Defence.pdb
-C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.exe
-C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.deps.json
-C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.runtimeconfig.json
-C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.dll
-C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.pdb
 C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\Tower Defence.genruntimeconfig.cache
 C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\ref\Tower Defence.dll
-C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\bin\Debug\net9.0\Tower Defence.xml
-C:\Users\PC\OneDrive\Desktop\.Net\TowerDefence\obj\Debug\net9.0\Tower Defence.xml

@@ -38,11 +38,15 @@ namespace Tower_Defence.Game
         virtual public void Placement()
         {
         }
-        virtual public void Effect(int health)
+        virtual public void Effect(List<Enemy> e)
         {
 
         }
         virtual public void Up()
+        {
+
+        }
+        virtual public void Attack(List <Enemy> e)
         {
 
         }
@@ -58,6 +62,10 @@ namespace Tower_Defence.Game
 
         //    }
         //}
+      virtual   public  void Draw()
+        {
+
+        }
 
 
 

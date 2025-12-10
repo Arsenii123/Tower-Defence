@@ -12,12 +12,6 @@
              Містить в собі функції як пересування, "анімацїї" та здоров'я
             </reamrks>
         </member>
-        <member name="T:Tower_Defence.Game.High_health">
-            <summary>
-            Це нащадок ворога 
-            </summary>
-                    public int health = 100; // начальное здоровье врага
-        </member>
         <member name="T:Tower_Defence.Game.Tower">
              <summary>
              Абастрактний клас башні  який буде успадковуватися
