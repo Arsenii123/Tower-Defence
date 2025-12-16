@@ -9,6 +9,7 @@ using Tower_Defence.Logic;
 namespace Tower_Defence.Game
 {
     using System.IO;
+    using System.Xml.Linq;
     using Tower_Defence.Menu;
     using static System.Net.Mime.MediaTypeNames;
 
@@ -51,20 +52,21 @@ namespace Tower_Defence.Game
 
         }
 
-        //virtual public int this[Tower t]
-        //{
-        //    get
-        //    {
-
-        //    }
-        //    set
-        //    {
-
-        //    }
-        //}
-      virtual   public  void Draw()
+        virtual public int this[Tower t]
         {
+            get
+            {
+                return Damage;
 
+            }
+            set
+            {
+                t.Up();
+            }
+        }
+        virtual   public  void Draw()
+        {
+           
         }
 
 

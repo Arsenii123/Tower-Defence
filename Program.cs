@@ -4,7 +4,7 @@
     using Tower_Defence.Game;
     using Tower_Defence.Logic;
     using Tower_Defence.Menu;
-
+    using System.Xml.Serialization;
     internal class Program
     {
         // Эти три переменные — общие для всей игры
@@ -28,6 +28,18 @@
 
                 Thread.Sleep(50);    // чтобы процессор не горел
             }
+            string filePath = "level.xml";
+
+            Level up = new Level();
+            var serializer = new XmlSerializer(typeof(Level));
+            // створює новий потік файлу для запису серіалізованого об'єкта у файл
+            var write = new StreamWriter(filePath);
+            serializer.Serialize(write, up); // !!!
+            write.Close();
+            var read = new FileStream(filePath, FileMode.Open, FileAccess.Read);
+            // завантажує об'єкт, збережений вище, за допомогою deserialize
+            var copy = (Level?)serializer.Deserialize(read); // !!!
+            read.Close();
         }
 
         // Спавн волны врагов
@@ -129,6 +141,7 @@
                 tower.Draw();
             }
         }
+
     }
 }
 

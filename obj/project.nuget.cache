@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ibUgzV/YSJg=",
+  "dgSpecHash": "GdIDJ+3GsZI=",
   "success": true,
   "projectFilePath": "C:\\Users\\PC\\OneDrive\\Desktop\\.Net\\TowerDefence\\Tower Defence.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\PC\\.nuget\\packages\\messagepack\\3.1.4\\messagepack.3.1.4.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\messagepack.annotations\\3.1.4\\messagepack.annotations.3.1.4.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\messagepackanalyzer\\3.1.4\\messagepackanalyzer.3.1.4.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.net.stringtools\\17.11.4\\microsoft.net.stringtools.17.11.4.nupkg.sha512"
+  ],
   "logs": []
 }
